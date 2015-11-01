@@ -19,16 +19,17 @@ circle.y = height/2;
 stage.addChild(circle);
 
 var ring = new PIXI.Graphics();
-ring.beginFill(0xFFFFFF);
+ring.lineStyle (5, 0xFFFFFF); 
 ring.drawCircle(0, 0, ringRadius);
 ring.beginFill(0x000000);
-ring.drawCircle(0, 0, ringRadius-5);
 moveRing();
 stage.addChild(ring);
 
 var score = 0;
 
 var scoreText = new PIXI.Text("Score: 0", {font:"30px Trebuchet MS, Helvetica, sans-serif", fill:"white"});
+scoreText.position.x = 10;
+scoreText.position.y = 10;
 stage.addChild(scoreText);
 
 renderer.render(stage);
